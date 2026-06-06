@@ -1,0 +1,17 @@
+{
+  "format_version": "1.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "custom:pistol",
+      "category": "Equipment"
+    },
+    "components": {
+      "minecraft:icon": "iron_sword",
+      "minecraft:use_duration": 0.5,
+      "minecraft:shoot": {
+        "projectile": "minecraft:arrow",
+        "launch_power": 3.0
+      }
+    }
+  }
+}
