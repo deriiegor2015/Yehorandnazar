@@ -1,0 +1,43 @@
+{
+  "format_version": "1.10",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "custom:pirate",
+      "is_spawnable": true,
+      "is_summonable": true
+    },
+    "components": {
+      "minecraft:type_family": ["npc"],
+      "minecraft:health": { "value": 20 },
+      "minecraft:movement": { "value": 0.25 },
+      "minecraft:behavior.random_stroll": {
+        "priority": 1,
+        "speed_multiplier": 1.0
+      },
+      "minecraft:interact": {
+        "interactions": [
+          {
+            "on_interact": {
+              "event": "give_item"
+            },
+            "text": "Ось подарунок для Назарчика!"
+          }
+        ]
+      }
+    },
+    "events": {
+      "give_item": {
+        "add": {
+          "component_groups": [
+            {
+              "minecraft:give_item": {
+                "item": "custom:pistol",
+                "amount": 1
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}
